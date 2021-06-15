@@ -25,5 +25,12 @@ repositories {
 
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.projectlombok:lombok')
+    compile('org.springframework.boot:spring-boot-starter-data-jpa') // 스프링부트용 Spring Data Jpa 추상화 라이브러리
+    compile('com.h2database:h2') // 인메모리 관계형 데이터베이스, 메모리 실행으로 애플리케이션 재시작 시 초기화. 테스트 용도로 많이 사용. JPA 테스트, 로컬 환경 구동용도
+    annotationProcessor('org.projectlombok:lombok')
+
+    testImplementation 'junit:junit:4.13.1'
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    testAnnotationProcessor('org.projectlombok:lombok')
 }
