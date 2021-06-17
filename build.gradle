@@ -19,6 +19,8 @@ test {
 
 dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web')
+    // Mustache
+    implementation('org.springframework.boot:spring-boot-starter-mustache')
 
     // Lombok
     implementation('org.projectlombok:lombok')
